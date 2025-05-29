@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../Utilities/firebase";
 import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
 
-export default function Login() {
+export default function Signup() {
     const [details, setDetails] = useState('');
     const [visible, setVisible] = useState(false);
 
@@ -22,19 +22,11 @@ export default function Login() {
         event.preventDefault()
 
         try {
-            // signInWithEmailAndPassword(auth, details?.email, details?.password)
             createUserWithEmailAndPassword(auth, details?.email, details?.password)
                 .then((res) => {
                     const user = res.user
-
-                    // if (!user.emailVerified) {
-                    //     alert('Please verify your email before login')
-                    //     return
-                    // }
-
-                    // alert('Login successfull')
-
-                    // Sent verification 
+                    
+                    
                     sendEmailVerification(user)
                         .then((emailRes) => {
                             console.log('emailRes :>> ', emailRes);
@@ -58,7 +50,7 @@ export default function Login() {
         <div className={`w-full h-full flex justify-center items-center`} >
             <form onSubmit={handleSubmit} className="px-5 pt-10 pb-12 w-sm sm:w-md m-5 rounded-lg backdrop-blur-[20px] shadow-2xl">
                 <div className="mb-3 font-semibold text-white text-3xl sm:text-4xl text-center">
-                    Login {" "}
+                    Signup{" "}
                 </div>
 
                 <div className="flex flex-col gap-7 ">
@@ -131,7 +123,7 @@ export default function Login() {
                     type="submit"
                     className="mt-4 px-6 py-3 text-lg font-semibold text-white bg-green-500 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 shadow-md"
                 >
-                    Login
+                    Signup
                 </button>
 
             </form>
