@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify'
 function App() {
 
     return (
-        <div className="min-h-[100dvh] bg-[url('backgroundImage.jpeg')] bg-cover bg-no-repeat bg-top">
+        <div className="min-h-[100dvh] bg-[url('./backgroundImage.jpeg')] bg-cover bg-no-repeat bg-top">
             <RouterProvider router={router} />
             <ToastContainer theme='dark' position='top-center' />
         </div>
