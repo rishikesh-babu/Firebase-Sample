@@ -4,9 +4,9 @@ import { Outlet } from 'react-router-dom'
 
 export default function Layout() {
     return (
-        <div>
+        <div className='min-h-[100dvh] flex flex-col'>
             <Header />
-            <div>
+            <div className='grow flex flex-col justify-center items-center'>
                 <Outlet />
             </div>
         </div>

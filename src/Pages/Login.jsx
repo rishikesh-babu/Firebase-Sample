@@ -62,8 +62,8 @@ export default function Login() {
     }
 
     return (
-        <div className={`w-full h-full flex justify-center items-center`} >
-            <form onSubmit={handleSubmit} className="px-5 pt-10 pb-12 w-sm sm:w-md m-5 rounded-lg backdrop-blur-[20px] shadow-2xl">
+        <div className="w-full">
+            <form onSubmit={handleSubmit} className="px-3 sm:px-10 md:px-10 pt-10 pb-12 mx-1 sm:mx-auto sm:w-md md:w-lg rounded-xl backdrop-blur-[20px] shadow-2xl">
                 <div className="mb-3 font-semibold text-white text-3xl sm:text-4xl text-center">
                     Login {" "}
                 </div>
@@ -136,7 +136,7 @@ export default function Login() {
 
                 <button
                     type="submit"
-                    className="mt-4 px-6 py-3 text-lg font-semibold text-white bg-green-500 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 shadow-md"
+                    className="w-full mt-10 px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 ring-2 ring-blue-600 ring-offset-2 ring-offset-white transition duration-200 shadow-md"
                 >
                     Login
                 </button>

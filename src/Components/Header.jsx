@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
-        <div className='p-3 flex justify-between items-center shadow-lg backdrop-blur-2xl rounded-sm'>
+        <div className='px-3 py-5 flex justify-between items-center shadow-lg backdrop-blur-2xl rounded-b-sm'>
             <div className='font-semibold text-2xl'>
                 <Link to={'/'}>
                     Logo
